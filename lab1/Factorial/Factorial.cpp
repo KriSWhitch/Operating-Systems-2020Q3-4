@@ -16,6 +16,11 @@ long double factorial(long double N) {
 
 int main()
 {
+    clock_t t1, t2;
+    t1 = clock();
     cout << "Factorial Result: " << factorial(100) << endl;
+    t2 = clock();
+    cout << "Time: " << t2 - t1 << " ticks" << endl;
+    cout << "Time: " << (t2 - t1) / CLOCKS_PER_SEC << " seconds" << endl;
 }
 
