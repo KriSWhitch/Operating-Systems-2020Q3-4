@@ -23,7 +23,6 @@ int fib(int i) {
 }
 
 long double factorial(long double N) {
-	Sleep(100);
 	if (N < 0) // если пользователь ввел отрицательное число
 		return 0; // возвращаем ноль
 	if (N == 0) // если пользователь ввел ноль,
@@ -52,11 +51,11 @@ DWORD WINAPI myThread2(LPVOID t)
 	HANDLE myHandle = CreateThread(0, 0, myThread3, (LPVOID)str, 0, &myThreadID);
 	t1 = clock();
 	long double result;
-	result = factorial(100);
+	result = factorial(5);
 	cout << "Factorial Result: " << result << endl;
 	t2 = clock();
-	cout << "Time: " << t2 - t1 << " ticks" << endl;
-	cout << "Time: " << (t2 - t1) / CLOCKS_PER_SEC << " seconds" << endl;
+	cout << "Time: " << (t2 - t1) * 10000 << " ticks" << endl;
+	cout << "Time: " << (t2 - t1) << " ms" << endl;
 	TerminateThread(myHandle, 0);
 	return result;
 }
@@ -71,11 +70,11 @@ DWORD WINAPI myThread(LPVOID t)
 	HANDLE myHandle = CreateThread(0, 0, myThread3, (LPVOID)str, 0, &myThreadID);
 	t1 = clock();
 	long double result;
-	result = fib(41);
+	result = fib(20);
 	cout << "Fibonachi Result: " << result << endl;
 	t2 = clock();
-	cout << "Time: " << t2 - t1 << " ticks" << endl;
-	cout << "Time: " << (t2 - t1) / CLOCKS_PER_SEC << " seconds" << endl;
+	cout << "Time: " << (t2 - t1) * 10000 << " ticks" << endl;
+	cout << "Time: " << (t2 - t1) << " ms" << endl;
 	TerminateThread(myHandle, 0);
 	return result;
 }
@@ -96,6 +95,6 @@ int main()
 	CloseHandle(myHandle2);
 	TerminateThread(myHandle2, 0);
 	t2 = clock();
-	cout << "Total Time: " << (t2 - t1) / CLOCKS_PER_SEC << " seconds" << endl;
+	cout << "Total Time: " << (t2 - t1) << " ms" << endl;
 	return 0;
 }

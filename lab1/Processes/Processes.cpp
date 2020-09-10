@@ -21,13 +21,13 @@ int main()
     si1.wShowWindow = SW_HIDE;
     si1.dwFlags = STARTF_USESHOWWINDOW;
     PROCESS_INFORMATION pi1;
-    bool bp1 = CreateProcess(L"F:\\Университет\\2k1s\\ОСМУ\\lab1\\Debug\\Fibonachi.exe", 0, 0, 0, FALSE, 0, NULL, NULL, &si1, &pi1);
+    bool bp1 = CreateProcess(L"C:\\Users\\Valson\\Desktop\\lab1\\Debug\\Fibonachi.exe", 0, 0, 0, FALSE, 0, NULL, NULL, &si1, &pi1);
     STARTUPINFO si2;
     ZeroMemory(&si2, sizeof(si2));
     si2.wShowWindow = SW_HIDE;
     si2.dwFlags = STARTF_USESHOWWINDOW;
     PROCESS_INFORMATION pi2;
-    bool bp2 = CreateProcess(L"F:\\Университет\\2k1s\\ОСМУ\\lab1\\Debug\\Factorial.exe", 0, 0, 0, FALSE, 0, NULL, NULL, &si2, &pi2);
+    bool bp2 = CreateProcess(L"C:\\Users\\Valson\\Desktop\\lab1\\Debug\\Factorial.exe", 0, 0, 0, FALSE, 0, NULL, NULL, &si2, &pi2);
     if (bp1) WaitForSingleObject(pi1.hProcess, INFINITE);
     CloseHandle(pi1.hProcess);
     CloseHandle(pi1.hThread);
@@ -35,5 +35,5 @@ int main()
     CloseHandle(pi2.hProcess);
     CloseHandle(pi2.hThread);
     t2 = clock();
-    cout << "Total Time: " << (t2 - t1) / CLOCKS_PER_SEC << " seconds" << endl;
+    cout << "Total Time: " << (t2 - t1) << " ms" << endl;
 }

@@ -14,8 +14,8 @@ int main()
 {
     clock_t t1, t2;
     t1 = clock();
-    cout << "Fibonachi Result: " << fib(41) << endl;
+    cout << "Fibonachi Result: " << fib(21) << endl;
     t2 = clock();
-    cout << "Time: " << t2 - t1 << " ticks" << endl;
-    cout << "Time: " << (t2 - t1) / CLOCKS_PER_SEC << " seconds" << endl;
+    cout << "Time: " << (t2 - t1) * 10000 << " ticks" << endl;
+    cout << "Time: " << (t2 - t1) << " ms" << endl;
 }

@@ -5,7 +5,6 @@
 using namespace std;
 
 long double factorial(long double N) {
-    Sleep(100);
     if (N < 0) // если пользователь ввел отрицательное число
         return 0; // возвращаем ноль
     if (N == 0) // если пользователь ввел ноль,
@@ -18,9 +17,9 @@ int main()
 {
     clock_t t1, t2;
     t1 = clock();
-    cout << "Factorial Result: " << factorial(100) << endl;
+    cout << "Factorial Result: " << factorial(11) << endl;
     t2 = clock();
-    cout << "Time: " << t2 - t1 << " ticks" << endl;
-    cout << "Time: " << (t2 - t1) / CLOCKS_PER_SEC << " seconds" << endl;
+    cout << "Time: " << (t2 - t1) * 10000 << " ticks" << endl;
+    cout << "Time: " << (t2 - t1) << " ms" << endl;
 }
 

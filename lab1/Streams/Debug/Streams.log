@@ -1,4 +1,4 @@
 ﻿  Streams.cpp
-F:\Университет\2k1s\ОСМУ\lab1\Streams\Streams.cpp(61,9): warning C4244: return: преобразование "long double" в "DWORD", возможна потеря данных
-F:\Университет\2k1s\ОСМУ\lab1\Streams\Streams.cpp(80,9): warning C4244: return: преобразование "long double" в "DWORD", возможна потеря данных
-  Streams.vcxproj -> F:\Университет\2k1s\ОСМУ\lab1\Debug\Streams.exe
+C:\Users\Valson\Desktop\lab1\Streams\Streams.cpp(60,9): warning C4244: return: преобразование "long double" в "DWORD", возможна потеря данных
+C:\Users\Valson\Desktop\lab1\Streams\Streams.cpp(79,9): warning C4244: return: преобразование "long double" в "DWORD", возможна потеря данных
+  Streams.vcxproj -> C:\Users\Valson\Desktop\lab1\Debug\Streams.exe
